@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+#demo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #100e0e;
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    color: aliceblue;
+    border-radius: 10px;
+}
+#small{
+    position: absolute;
+    left: 710px;
+    top: 168px;
+    color: aliceblue;
+}
