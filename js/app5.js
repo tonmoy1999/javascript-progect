@@ -51,7 +51,20 @@ if(titleName.value == '' || authorName.value == '' || yearName.value == '' ){
 }
 
 else{
-    
+    const newTr=document.createElement("tr");
+    bookList.appendChild(newTr);
+
+    const newTh=document.createElement("th");
+    newTr.appendChild(newTh);
+    newTh.innerHTML = titleName.value;
+
+    const newThh=document.createElement("th");
+    newTr.appendChild(newThh);
+    newThh.innerHTML = authorName.value;
+
+    const newThhh=document.createElement("th");
+    newTr.appendChild(newThhh);
+    newThhh.innerHTML = yearName.value;
 }
-})
+});
 
