@@ -42,29 +42,47 @@ const authorName=document.querySelector("#author");
 const yearName=document.querySelector("#year");
 const btn=document.querySelector(".btn");
 const bookList=document.querySelector("#book-list");
+document.getElementById("newpage").style.display = "none";
 
-
-btn.addEventListener("click",function(e){
-e.preventDefault();
-if(titleName.value == '' || authorName.value == '' || yearName.value == '' ){
-    alert("input filap korte hove");
+const myNme=()=>{
+    document.getElementById("book-form").style.display="none";
+    document.getElementById("newpage").style.display = "block";
 }
 
-else{
-    const newTr=document.createElement("tr");
-    bookList.appendChild(newTr);
+    btn.addEventListener("click",function(e){
+        e.preventDefault();
+        // if(!titleName.value || !authorName.value  || !yearName.value  ){
+        // alert("3 input  filap")
+        // }
+         if(!titleName.value){
+            alert("Titel poron koron")
+        }
+        else if(!authorName.value){
+            alert("author poron koron")
+        }
+        else if(!yearName.value){
+            alert("year poron koron")
+        }
+        else{
+            const newTr=document.createElement("tr");
+            bookList.appendChild(newTr);
+        
+            const newTh=document.createElement("th");
+            newTr.appendChild(newTh);
+            newTh.innerHTML = titleName.value;
+        
+            const newThh=document.createElement("th");
+            newTr.appendChild(newThh);
+            newThh.innerHTML = authorName.value;
+        
+            const newThhh=document.createElement("th");
+            newTr.appendChild(newThhh);
+            newThhh.innerHTML = yearName.value;
+            myNme()
+        }
+        });
 
-    const newTh=document.createElement("th");
-    newTr.appendChild(newTh);
-    newTh.innerHTML = titleName.value;
 
-    const newThh=document.createElement("th");
-    newTr.appendChild(newThh);
-    newThh.innerHTML = authorName.value;
 
-    const newThhh=document.createElement("th");
-    newTr.appendChild(newThhh);
-    newThhh.innerHTML = yearName.value;
-}
-});
+
 

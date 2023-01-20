@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+.posts{
+   justify-content: center;
+  width: 100%;
+  display: flex;
+    
+}
+.item{
+    /* width: 100px;
+    height: 50px; */
+    background-color: rgb(187, 133, 237);
+    text-align: center;
+    box-shadow: 5px 5px 16px 0px rgba(12, 12, 12, 0.2);
+    /* display: flex; */
+    flex-wrap: wrap;
+    left: 30px;
+    padding: 1rem;
+    width: 20%;
+    margin: 5px;
+}
+/* @media screen and {
+    
+} */
